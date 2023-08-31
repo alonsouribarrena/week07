@@ -1,5 +1,5 @@
 const postModel = require('../model/postModel')
-const commentModel = require('./commentController')
+
 
 const homePage = (req, res)=>{
   postModel.find()
