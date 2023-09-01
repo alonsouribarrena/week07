@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Welcome to facebook</h1>
+  <form action="/addFeed" method="POST">
+    <button>Add a Post</button><br><br>
+    <input type="text" name="name" required><br>
+    <% if (err) { %>
+      <%= err.name %>
+     <% } %>
+     <br>
+    <input type="text" name="message" required><br>
+    <% if (err) { %>
+      <%= err.message %>
+     <% } %>
+  </form>
+    <% if (feed.length > 0) { %>
+      <% feed.forEach(feed =>{ %>
+        <div>
+          <h1><%= feed.name %></h1>
+          <h5><%= feed.message %></h5>
+          <p><a href="/feed/<%= feed._id %>">see more</a></p>
+          <%= feed.created_at %>
+          <hr>
+        </div>
+      <% }) %>
+    <% } else { %>
+      <h2>no post to show</h2>
+      <% } %>
+</body>
+</html>

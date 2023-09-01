@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Feed</title>
+</head>
+<body>
+  <h1>edit a post</h1>
+  <a href="/feed/edit/<%= feed._id %>">Back</a></h1>
+  <form action="/submit/feed/<%= feed._id %>" method="POST">
+    <input type="text" name="name" value="<%= feed.name %>"  required ><br>
+    <input type="text" name="message" value="<%= feed.message %>" required><br>
+    <button>submit</button><br>
+  </form>
+</body>
+</html>
