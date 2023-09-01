@@ -7,7 +7,7 @@ route.post('/addFeed', feedController.addFeed)
 route.get('/feed/:id',feedController.getFeed)
 route.get('/feed/edit/:id', feedController.editFeed)
 route.get('/delete/feed/:id', feedController.deleteFeed)
-route.post('/submit/feed/:id', feedController.submitFeed)
+route.post('/feed/:id', feedController.submitFeed)
 
 
 module.exports = route;
